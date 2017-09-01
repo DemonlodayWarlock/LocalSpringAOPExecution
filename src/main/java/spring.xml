@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-lazy-init="true" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+	
+	<context:annotation-config/>
+	<aop:aspectj-autoproxy/>
+	
+	<bean name="shapeService" class="com.hwei.learning.service.ShapeService"/>
+	
+	<bean name="circle" class="com.hwei.learning.model.Circle">
+		<property name="name" value="Circle name"/>
+	</bean>
+	
+	<bean name="triangle" class="com.hwei.learning.model.Triangle">
+		<property name="name" value="Triangle name"/>
+	</bean>
+	
+	<bean name="myAspect" class="com.hwei.learning.aspect.MyAspect"/>
+	
+	<bean name="loggingAspect" class="com.hwei.learning.aspect.LoggingAspect"/>
+	
+	<bean name="changeService" class="com.hwei.learning.service.ChangeService"/>
+	
+	
+
+</beans>
