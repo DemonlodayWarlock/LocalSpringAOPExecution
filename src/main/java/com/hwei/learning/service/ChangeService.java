@@ -1,10 +1,9 @@
 package com.hwei.learning.service;
 
-import org.springframework.stereotype.Service;
-
 import com.hwei.learning.aspect.LogRequired;
 
-@Service("bookService")
+
+//@Service("bookService")
 public class ChangeService {
 	
 	@LogRequired
